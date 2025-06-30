@@ -1,0 +1,11 @@
+{
+  "global": {
+    "board_size": [8, 8],
+    "quantity_of_mines": {
+      "easy": 0.1,
+      "medium": 0.3,
+      "hard": 0.6,
+      "impossible": 0.8
+    }
+  }
+}
