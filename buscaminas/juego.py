@@ -50,13 +50,13 @@ class Juego:
 
             if not self.tablero.revelar(fila, col):
                 self.tablero.mostrar_tablero()
-                print("💥 Has perdido.")
+                print(" Has perdido.")
                 return
 
             if self.tablero.completado():
                 self.tablero.mostrar_tablero()
                 duracion = round(time.time() - inicio, 2)
-                print(f"🎉 ¡Ganaste en {duracion} segundos!")
+                print(f" ¡Ganaste en {duracion} segundos!")
                 self._registrar_resultado(duracion)
                 self._mostrar_top3()
                 return
@@ -72,7 +72,7 @@ class Juego:
             json.dump(self.leaderboard, f, indent=2)
 
     def _mostrar_top3(self):
-        print("\n🏆 Mejores tiempos:")
+        print("\n Mejores tiempos:")
         mejores = sorted(self.leaderboard, key=lambda x: x["time"])[:3]
         for i, jugador in enumerate(mejores, 1):
             nombre = f"{jugador['first_name']} {jugador['last_name']}"
